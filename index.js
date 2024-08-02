@@ -34,7 +34,7 @@ function generateFile(pathFileToRead, pathFolderToWrite, areaColor) {
                         line += `\n<Style><LineStyle><color>${areaColor}</color></LineStyle><PolyStyle><color>${areaColor}</color><fill>1</fill></PolyStyle></Style>\n`
                     }
                     if(line.includes('<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>')) {
-                        line = line.replace('<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>', 
+                        line = line.replace('<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>',
                             `<Style><LineStyle><color>${areaColor}</color></LineStyle><PolyStyle><color>${areaColor}</color><fill>1</fill></PolyStyle></Style>`);
                     }
                     if (!gotBeginning) {
@@ -94,11 +94,11 @@ async function main() {
     if (!fs.existsSync('./tmp')) fs.mkdirSync('./tmp');
 
     await Promise.all([
-        generateFile(pathToCoalClosure, pathFolderToWriteCoalClosures, "6600ff00")
-        // generateFile(pathToLowIncomeCategory1, pathFolderToWriteLowIncomeCategory1, "66d93c39")
-        // generateFile(pathToLowIncomePPC, pathFolderToWriteLowIncomePPC, "66a9e338"),
-        // generateFile(pathToLowIncomeCEJSTFile, pathFolderToWriteLowIncomeCEJST, "66cd1c4d"),
-        // generateFile(pathToMSANMSA, pathFolderToWriteMSA, "668c46ee"),
+        // generateFile(pathToCoalClosure, pathFolderToWriteCoalClosures, "6648D77F")
+        // generateFile(pathToLowIncomeCategory1, pathFolderToWriteLowIncomeCategory1, "66eb8ae3")
+        // generateFile(pathToLowIncomePPC, pathFolderToWriteLowIncomePPC, "669A3E83"),
+        // generateFile(pathToLowIncomeCEJSTFile, pathFolderToWriteLowIncomeCEJST, "669564EE"),
+        generateFile(pathToMSANMSA, pathFolderToWriteMSA, "66339A5A"),
     ])
 }
 
